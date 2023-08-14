@@ -1,10 +1,18 @@
-# MLOps_for_MLE
+# 01-4) Data Insertion Loop
 
 <br>
 
-## 01. Database
+## Chapter Preview
 
+<br>
 
-01-1) DB Server Creation   
-[01-2) Table Creation](https://github.com/Seona056/MLOps_for_MLE/tree/01-2)  
-[01-3) Data Insertion](https://github.com/Seona056/MLOps_for_MLE/tree/01-3)
+### 목표
+1. 생성된 테이블 안에 데이터를 계속해서 생성하는 스크립트를 작성합니다.
+2. DB 에 데이터가 계속해서 삽입되고 있는지 확인합니다.
+
+<br>
+
+### 스펙 명세서
+1. `3) Data Insertion`` 챕터에서 작성한 스크립트를 이용하여 계속해서 데이터를 생성하는 스크립트를 작성합니다.
+2. 생성된 `iris_data` 테이블에 `psycopg2` 를 이용하여 스크립트를 실행해 계속해서 데이터를 삽입합니다.
+3. `psql` 을 이용하여 삽입되고 있는 데이터를 확인합니다.
