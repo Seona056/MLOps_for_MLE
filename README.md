@@ -1,14 +1,18 @@
-# Chapter Preview
+# 01-2) Table Creation
 
 <br>
 
-## 목표
+## Chapter Preview
+
+<br>
+
+### 목표
 1. 생성된 DB 에 query 를 작성하여 테이블을 생성합니다.
 2. 생성된 테이블을 확인합니다.
 
 <br>
 
-## 스펙 명세서
+### 스펙 명세서
 1. `pandas`, `psycopg2-binary`, `scikit-learn` 패키지를 설치합니다.
 2. Python 스크립트를 이용하여 DB 에 접근합니다.
     - user : myuser
