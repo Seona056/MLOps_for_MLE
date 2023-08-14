@@ -1,14 +1,18 @@
-# Chapter Preview
+# 01-4) Data Insertion
 
 <br>
 
-## 목표
+## Chapter Preview
+
+<br>
+
+### 목표
 1. 생성한 테이블에 iris 데이터 한 줄을 삽입합니다.
 2. 삽입한 데이터를 확인합니다.
 
 <br>
 
-## 스펙 명세서
+### 스펙 명세서
 1. Python 스크립트를 이용하여 DB 에 접속합니다.
     - *user* : `myuser`
     - *password* : `mypassword`
