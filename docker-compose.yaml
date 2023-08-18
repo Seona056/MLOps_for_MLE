@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  postgres-server:
+    image: postgres:15.3
+    container_name: postgres-server
+    ports: 
+      - 5432:5432   # 컨테이너에서 외부로 노출할 포트 포워딩. host:container로 사용. 여러개 지정 가능
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "U", "myuser", "-d", "mydatabase"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  data-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: data-generator
+    depends_on:
+      - postgres-server
+        # condition: service_healthy    # docs에서와 달리 추가하면 오류가 나서 삭제함
+    command: ["postgres-server"]
+
+networks:
+  default:
+    name: mlops-network
